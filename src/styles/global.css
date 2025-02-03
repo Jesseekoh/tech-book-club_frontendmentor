@@ -1,0 +1,20 @@
+@import "tailwindcss";
+
+
+@font-face {
+    font-family: martianMono;
+    src: url('../assets/fonts/martian-mono/MartianMono-VariableFont_wdth,wght.ttf');
+}
+
+@font-face {
+    font-family: inter;
+    src: url('../assets/fonts/inter/Inter-VariableFont_opsz,wght.ttf');
+}
+
+html {
+    font-family: inter, Arial, Helvetica, sans-serif;
+}
+
+header {
+    background-image: linear-gradient(to bottom, transparent 60%, #FAF5F3), url('../assets/images/pattern-light-bg.svg');
+}

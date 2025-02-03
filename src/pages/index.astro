@@ -1,0 +1,139 @@
+---
+import Welcome from '../components/Welcome.astro';
+import Layout from '../layouts/Layout.astro';
+import Logo from '../assets/images/logo.svg';
+import ArrowDown from '../assets/images/icon-arrow-down.svg';
+import Avatars from '../assets/images/image-avatars.webp';
+import HeroImageMobile from '../assets/images/image-hero-mobile.webp';
+import HeroImageTablet from '../assets/images/image-hero-tablet.webp';
+import HeroImageDesktop from '../assets/images/image-hero-desktop.webp';
+import MainImageMobile from '../assets/images/image-read-together-mobile.webp';
+import MainImageTablet from '../assets/images/image-read-together-tablet.webp';
+import MainImageDesktop from '../assets/images/image-read-together-desktop.webp';
+import CheckBoxIcon from '../assets/images/icon-check.svg';
+import Stars from '../assets/images/icon-star.svg';
+import '../styles/global.css';
+
+// Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
+// Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
+---
+
+<Layout>
+    <!-- <Welcome /> -->
+    <header class="">
+        <div class="container px-4 pt-6">
+            <a href="/"><img src={Logo.src} alt="" /></a>
+            <section class="hero pt-12 pb-20">
+                <h1
+                    class="text-[38px] pb-6 font-bold font-[martianMono] bg-[linear-gradient(107deg,#FF9A60_-11.37%,#062630_61.84%)] bg-clip-text text-transparent leading-[1.2] tracking-[-2px]"
+                >
+                    Join the ultimate tech book club
+                </h1>
+                <p class="text-xl leading-[1.4] tracking-[-0.5px]">
+                    Turn your reading time into learning time with fellow tech
+                    enthusiasts. Get curated recommendations, join vibrant
+                    discussions, and level up your skills one chapter at a time.
+                </p>
+
+                <button
+                    class="px-3 py-4 border-2 flex rounded-md font-bold font-[martianMono]"
+                    >REVIEW MEMBERSHIP OPTIONS<span
+                        ><img src={ArrowDown.src} /></span
+                    >
+                </button>
+
+                <div class="flex items-center mb-16 gap-3">
+                    <div class="avatars">
+                        <img src={Avatars.src} width="160" alt="avatars" />
+                    </div>
+                    <div>
+                        <div class="stars flex flex-wrap">
+                            <img src={Stars.src} alt="" />
+                            <img src={Stars.src} alt="" />
+                            <img src={Stars.src} alt="" />
+                            <img src={Stars.src} alt="" />
+                            <img src={Stars.src} alt="" />
+                        </div>
+                        <span
+                            class="font-[martianMono] text-sm leading-[1.2] tracking-[-1px]"
+                            >200+ developers joined already</span
+                        >
+                    </div>
+                </div>
+                <div class="img-container rounded-xl overflow-hidden">
+                    <picture>
+                        <source
+                            media="(min-width:768px)"
+                            src={HeroImageTablet.src}
+                        />
+                        <source
+                            media="(min-width: 1024px)"
+                            src={HeroImageDesktop.src}
+                        />
+                        <img src={HeroImageMobile.src} />
+                    </picture>
+                </div>
+            </section>
+        </div>
+    </header>
+    <section>
+        <div class="contain er px-4 pt-6">
+            <h2
+                class="text-[34px] leading-[1.3] tracking-[-2px] font-[martianMono] font-semibold"
+            >
+                Read together, grow together
+            </h2>
+            <ul class="flex flex-col gap-4 mb-10">
+                <li class="flex gap-3.5 justify-between">
+                    <img
+                        src={CheckBoxIcon.src}
+                        alt="Checkbox icon"
+                        class="w-[28px]"
+                    />
+                    <p class="text-xl leading-[1.4] tracking-[-0.5px]">
+                        Monthly curated tech reads selected by industry experts
+                    </p>
+                </li>
+                <li class="flex gap-3.5 justify-between">
+                    <img
+                        src={CheckBoxIcon.src}
+                        alt="Checkbox icon"
+                        class="w-[28px]"
+                    />
+                    <p class="text-xl leading-[1.4] tracking-[-0.5px]">
+                        Virtual and in-person meetups for deep-dive discussions
+                    </p>
+                </li>
+                <li class="flex gap-3.5 justify-between">
+                    <img
+                        src={CheckBoxIcon.src}
+                        alt="Checkbox icon"
+                        class="w-[28px]"
+                    />
+
+                    <p class="text-xl leading-[1.4] tracking-[-0.5px]">
+                        Early access to new tech book releases
+                    </p>
+                </li>
+                <li class="flex gap-3.5 justify-between">
+                    <img
+                        src={CheckBoxIcon.src}
+                        alt="Checkbox icon"
+                        class="w-[28px]"
+                    />
+                    <p class="text-xl leading-[1.4] tracking-[-0.5px]">
+                        Author Q&A sessions with tech thought leaders
+                    </p>
+                </li>
+            </ul>
+            <div class="img-container rounded-xl overflow-hidden">
+                <picture>
+                    <img
+                        src={MainImageMobile.src}
+                        alt="People reading together"
+                    />
+                </picture>
+            </div>
+        </div>
+    </section>
+</Layout>
