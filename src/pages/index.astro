@@ -2,7 +2,10 @@
 import Welcome from '../components/Welcome.astro';
 import Layout from '../layouts/Layout.astro';
 import Logo from '../assets/images/logo.svg';
+import BlueSkyLogo from '../assets/images/logo-bluesky.svg';
+import LinkedInLogo from '../assets/images/logo-linkedin.svg';
 import ArrowDown from '../assets/images/icon-arrow-down.svg';
+import ArrowUp from '../assets/images/icon-arrow-up.svg';
 import Avatars from '../assets/images/image-avatars.webp';
 import HeroImageMobile from '../assets/images/image-hero-mobile.webp';
 import HeroImageTablet from '../assets/images/image-hero-tablet.webp';
@@ -39,12 +42,13 @@ import '../styles/global.css';
                     discussions, and level up your skills one chapter at a time.
                 </p>
 
-                <button
-                    class="px-3 py-4 border-2 border-neutral-900 flex rounded-md font-bold font-[martianMono] text-neutral-900"
+                <a
+                    href="#memberships"
+                    class="px-6 py-5 border-2 border-neutral-900 flex items-center gap-2 rounded-md text-preset-6-mobile text-neutral-900"
                     >REVIEW MEMBERSHIP OPTIONS<span
-                        ><img src={ArrowDown.src} /></span
+                        ><img src={ArrowDown.src} width="24" /></span
                     >
-                </button>
+                </a>
 
                 <div class="flex items-center mb-16 gap-3">
                     <div class="avatars">
@@ -127,7 +131,7 @@ import '../styles/global.css';
                     </p>
                 </li>
             </ul>
-            <div class="img-container rounded-xl overflow-hidden mb-16">
+            <div class="img-container rounded-lg overflow-hidden mb-16">
                 <picture>
                     <source
                         media="(min-width: 768px)"
@@ -163,7 +167,7 @@ import '../styles/global.css';
                 between. Our discussions blend technical depth with practical applications.
             </p>
 
-            <div class="img-container rounded-xl overflow-hidden mb-16">
+            <div class="img-container rounded-lg overflow-hidden mb-16">
                 <picture>
                     <source
                         media="(min-width:768px)"
@@ -179,7 +183,204 @@ import '../styles/global.css';
         </div>
     </section>
 
-    <footer>
-        <div class="container px-4 pt-6 bg-neutral-900"></div>
+    <section id="memberships">
+        <div class="container px-4 pt-6">
+            <h2 class="text-preset-2 text-neutral-900 pb-6">
+                Membership options
+            </h2>
+            <div class="membership-options flex flex-col gap-6">
+                <div class="card p-6 border-neutral-200 border-2 rounded-xl">
+                    <div class="divide-y">
+                        <div class="text">
+                            <h3 class="text-preset-4 mb-6">Starter</h3>
+                            <p class="text-preset-5-regular mb-6">
+                                <span class="text-preset-3">$19</span>
+                                /month
+                            </p>
+                        </div>
+                        <ul class="mt-6">
+                            <li class="flex mb-4 gap-3">
+                                <img
+                                    src={CheckBoxIcon.src}
+                                    alt="Checkbox icon"
+                                    class="w-[28px]"
+                                />
+                                <p class="text-preset-5-regular">
+                                    1 book/month
+                                </p>
+                            </li>
+                            <li class="flex gap-3">
+                                <img
+                                    src={CheckBoxIcon.src}
+                                    alt="Checkbox icon"
+                                    class="w-[28px]"
+                                />
+                                <p class="text-preset-5-regular">
+                                    Online forums
+                                </p>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <button
+                        class="mt-8 px-5 py-4 w-full text-center border-3 rounded-lg border-neutral-900 bg-light-salmon-50"
+                        >SUBSCRIBE NOW</button
+                    >
+                </div>
+                <div
+                    class="pro-tier card p-6 bg-light-salmon-50 border-neutral-200 border-2 rounded-xl relative"
+                >
+                    <div class="divide-y">
+                        <div class="text">
+                            <h3 class="text-preset-4 mb-6">Pro</h3>
+                            <p class="text-preset-5-regular mb-6">
+                                <span class="text-preset-3">$29</span>
+                                /month
+                            </p>
+                        </div>
+                        <ul class="mt-6">
+                            <li class="flex mb-4 gap-3">
+                                <img
+                                    src={CheckBoxIcon.src}
+                                    alt="Checkbox icon"
+                                    class="w-[28px]"
+                                />
+                                <p class="text-preset-5-regular">
+                                    2 books/month
+                                </p>
+                            </li>
+                            <li class="flex gap-3">
+                                <img
+                                    src={CheckBoxIcon.src}
+                                    alt="Checkbox icon"
+                                    class="w-[28px]"
+                                />
+                                <p class="text-preset-5-regular">
+                                    Virtual meetups
+                                </p>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <button
+                        class="mt-8 px-5 py-4 w-full text-center border-3 rounded-lg border-neutral-900 bg-light-salmon-50"
+                        >SUBSCRIBE NOW</button
+                    >
+                </div>
+                <div class="card p-6 border-neutral-200 border-2 rounded-lg">
+                    <div class="divide-y">
+                        <div class="text">
+                            <h3 class="text-preset-4 mb-6">Enterprise</h3>
+                            <p class="text-preset-3 mb-6">Custom</p>
+                        </div>
+                        <ul class="mt-6">
+                            <li class="flex mb-4 gap-3">
+                                <img
+                                    src={CheckBoxIcon.src}
+                                    alt="Checkbox icon"
+                                    class="w-[28px]"
+                                />
+                                <p class="text-preset-5-regular">Team access</p>
+                            </li>
+                            <li class="flex gap-3">
+                                <img
+                                    src={CheckBoxIcon.src}
+                                    alt="Checkbox icon"
+                                    class="w-[28px]"
+                                />
+                                <p class="text-preset-5-regular">
+                                    Private sessions
+                                </p>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <button
+                        class="mt-8 px-5 py-4 w-full text-center border-3 rounded-lg border-neutral-900 bg-light-salmon-50"
+                        >TALK TO US</button
+                    >
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="testimonials">
+        <div class="container px-4 pt-6 pb-16">
+            <div class="stars flex flex-wrap gap-1.5">
+                <img src={Stars.src} alt="" width={28} />
+                <img src={Stars.src} alt="" width={28} />
+                <img src={Stars.src} alt="" width={28} />
+                <img src={Stars.src} alt="" width={28} />
+                <img src={Stars.src} alt="" width={28} />
+            </div>
+            <p class="text-preset-4 pb-8">
+                "This book club transformed my technical reading from a solitary
+                activity into an enriching community experience. The discussions
+                are gold!"
+            </p>
+            <p class="text-preset-5-regular text-neutral-700">
+                Sarah Chen, Software Architect
+            </p>
+        </div>
+    </section>
+
+    <footer class="bg-neutral-900">
+        <div
+            class="container px-4 pt-12 overflow-hidden rounded-t-2xl divide-y divide-neutral-700"
+        >
+            <div class="cta">
+                <h3 class="text-preset-2 text-white text-center mb-10">
+                    Ready to debug your reading list?
+                </h3>
+                <a
+                    href="#memberships"
+                    class="px-6 py-5 border-2 border-white flex items-center gap-2 rounded-md text-white text-preset-6-mobile mb-6"
+                    >REVIEW MEMBERSHIP OPTIONS<span
+                        ><img
+                            src={ArrowUp.src}
+                            width="24"
+                            class="invert brightness-0 sepia saturate-0 contrast-100 hue-rotate-[288deg]"
+                        /></span
+                    >
+                </a>
+                <div class="flex items-center mb-16 gap-3">
+                    <div class="avatars pb-1">
+                        <img src={Avatars.src} width="160" alt="avatars" />
+                    </div>
+                    <div>
+                        <div class="stars flex flex-wrap">
+                            <img src={Stars.src} alt="stars" />
+                            <img src={Stars.src} alt="stars" />
+                            <img src={Stars.src} alt="stars" />
+                            <img src={Stars.src} alt="stars" />
+                            <img src={Stars.src} alt="stars" />
+                        </div>
+                        <span class="text-preset-7 text-white"
+                            >200+ developers joined already</span
+                        >
+                    </div>
+                </div>
+            </div>
+            <div
+                class="flex flex-col text-center justify-center items-center pt-6 px-8 pb-6"
+            >
+                <p class="text-white">© 2024 - Tech Book Club</p>
+                <div class="icons flex pt-4 gap-6">
+                    <a href="#"
+                        ><img
+                            src={BlueSkyLogo.src}
+                            width="22"
+                            alt="Bluesky logo"
+                        /></a
+                    >
+                    <a href="#"
+                        ><img
+                            src={LinkedInLogo.src}
+                            width="22"
+                            alt="LinkedIn logo"
+                        /></a
+                    >
+                </div>
+            </div>
+        </div>
     </footer>
 </Layout>
